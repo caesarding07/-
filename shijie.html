@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="caesarding" content="SublimeText">
+	<title>诗介</title>
+	<style type="text/css">
+		@font-face {
+			font-family: blackboard;
+			src:url("font/blackboard.ttf");
+		}
+		@font-face{
+			font-family: hyxuejunF;
+			src:url("font/hyxuejunF.ttf");/*主界面使用字体*/
+		}
+		#canvas{
+			font-family: "hyxuejunF";
+			font-size: 0;
+			/*border:1px solid #000;*/
+		}
+		#video{
+			display: none;
+			position: absolute;
+			z-index: 10;
+		}
+		/*hover选择鼠标指针浮动在其上的元素，并设置其样式：*/
+		ul:hover{
+			cursor: pointer;/*hand*/
+		}
+		#canvas:hover{
+			cursor:url('image/button/mo.png') 10 25, auto;
+			}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<canvas id="canvas" width="640" height="400">
+			Your Brower does not support Canvas, please upgrade
+		</canvas>
+		<audio src="audio/case0/bg.mp3" id="bgCase0">case0背景音乐</audio>
+		<audio src="audio/case0/read.mp3" id="read0">
+		case0诗词朗读</audio>
+		<!-- case0配音组 -->
+		<audio src="audio/case0/word1.mp3" id="a01"></audio>
+		<audio src="audio/case0/word2.mp3" id="a02"></audio>
+		<audio src="audio/case0/word3.mp3" id="a03"></audio>
+		<audio src="audio/case0/word4.mp3" id="a04"></audio>
+		<audio src="audio/case0/word5.mp3" id="a05"></audio>
+		<audio src="audio/case0/word6.mp3" id="a06"></audio>
+		<audio src="audio/case0/word7.mp3" id="a07"></audio>
+		<audio src="audio/case0/word8.mp3" id="a08"></audio>
+		<!-- <audio src="audio/case1/bg.mp3" id="bgCase1"></audio> -->
+		<!-- case1视频音频组 -->
+		</audio>
+		<video src="video/video.mp4" id="video" ></video>
+		<audio src="video/video.mp3" id="case10"></audio>
+		<!-- case2音频组 -->
+		<audio src="audio/case2/bg.mp3" id="bgCase2">
+		<!-- case3音频组 -->
+		<audio src="audio/case3/bg.mp3" id="bgCase3">case3背景音乐</audio>
+		<!-- case4音频组 -->
+		<audio src="audio/case4/bg.mp3" id="bgCase4">case4背景音乐</audio>
+	</div>
+	<!-- else文件夹内文件--不建议擅自修改-->
+	<script type="text/javascript" src="js/else/requestNextAnimationFrame.js"></script>
+	<script type="text/javascript" src="js/else/sprites.js"></script>
+	<script type="text/javascript" src="js/else/ruler.js">参考标尺</script>
+	<!-- 全局调用函数体系 -->
+	<script type="text/javascript" src="js/functions.js">功能函数库</script>
+	<script type="text/javascript" src="js/loading.js">状态加载界面（可选）</script>
+	<script type="text/javascript" src="js/statement.js">定义全局状态</script>
+	<script type="text/javascript" src="js/button.js">按钮绘制及实现</script>
+	<script type="text/javascript" src="js/interface.js">局部界面封装</script>
+	<script type="text/javascript" src="js/start.js">开始选择界面</script>
+	<!-- 	choice文件夹内文件 -->
+	<script type="text/javascript" src="js/choice/case0.js">选择副本0</script>
+	<script type="text/javascript" src="js/choice/case1.js">选择副本1</script>
+	<script type="text/javascript" src="js/choice/case2.js">选择副本2</script>
+	<script type="text/javascript" src="js/choice/case3.js">选择副本3</script>
+	<script type="text/javascript" src="js/choice/case4.js">选择副本4</script>
+	<!-- 开发区域 -->
+	<script type="text/javascript" src="js/main.js">实现主要功能以及开发调试区域</script>
+</body>
+</html>
